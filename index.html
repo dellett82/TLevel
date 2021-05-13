@@ -54,29 +54,31 @@
 	    maxZoom: 22
         });
         
-	var college = L.marker([51.129852, -2.7334955]).addTo(mymap);
-	college.bindPopup("<b>C Block</b><br>T-Levels, Woodworking, Music").openPopup();
+	var data = omnivore.csv('strode.csv', null, siteData).on('ready', function() {}).addTo(mymap);
 	
-	var college1 = L.marker([51.130310, -2.733310]).addTo(mymap);
-	college1.bindPopup("<b>Refectory</b><br>Lunch Hall").openPopup();
+	//var college = L.marker([51.129852, -2.7334955]).addTo(mymap);
+	//college.bindPopup("<b>C Block</b><br>T-Levels, Woodworking, Music").openPopup();
 	
-	var college2 = L.marker([51.130455, -2.734003]).addTo(mymap);
-	college2.bindPopup("<b>A Block</b><br>Reception, Staff Offices").openPopup();
+	//var college1 = L.marker([51.130310, -2.733310]).addTo(mymap);
+	//college1.bindPopup("<b>Refectory</b><br>Lunch Hall").openPopup();
 	
-	var college3 = L.marker([51.129667, -2.732614]).addTo(mymap);
-	college3.bindPopup("<b>M Block</b><br>Business Studies, Maths, Higher Educations").openPopup();
+	//var college2 = L.marker([51.130455, -2.734003]).addTo(mymap);
+	//college2.bindPopup("<b>A Block</b><br>Reception, Staff Offices").openPopup();
 	
-	var college4 = L.marker([51.129290, -2.732866]).addTo(mymap);
-	college4.bindPopup("<b>Swimming Pool</b><br>Strode Swimming Pool").openPopup();
+	//var college3 = L.marker([51.129667, -2.732614]).addTo(mymap);
+	//college3.bindPopup("<b>M Block</b><br>Business Studies, Maths, Higher Educations").openPopup();
 	
-	var college5 = L.marker([51.129482, -2.732061]).addTo(mymap);
-	college5.bindPopup("<b>J Block</b><br>Politics, Geography").openPopup();
+	//var college4 = L.marker([51.129290, -2.732866]).addTo(mymap);
+	//college4.bindPopup("<b>Swimming Pool</b><br>Strode Swimming Pool").openPopup();
 	
-	var college6 = L.marker([51.129202, -2.731943]).addTo(mymap);
+	//var college5 = L.marker([51.129482, -2.732061]).addTo(mymap);
+	//college5.bindPopup("<b>J Block</b><br>Politics, Geography").openPopup();
+	
+	//var college6 = L.marker([51.129202, -2.731943]).addTo(mymap);
 	college6.bindPopup("<b>E Block</b><br>Cooking, Cafeteria, Travel and Tourism").openPopup();
 	
-	var college7 = L.marker([51.130249,-2.733992]).addTo(mymap);
-	college7.bindPopup("<b>B Block</b><br>English, Business").openPopup();
+	//var college7 = L.marker([51.130249,-2.733992]).addTo(mymap);
+	//college7.bindPopup("<b>B Block</b><br>English, Business").openPopup();
 	
         var baseMaps = {
            "OSM ": osm,
@@ -84,14 +86,14 @@
         };
 
         var overlayMaps = {
-            "T Levels": college,
-            "Refectory": college1,
-	    "A Block": college2,
-            "M Block": college3,
-	    "Swimming Pool": college4,
-	    "J Block": college5,
-	    "E Block": college6,
-	    "B Block": college7
+           // "T Levels": college,
+          //  "Refectory": college1,
+	//    "A Block": college2,
+        //    "M Block": college3,
+	//    "Swimming Pool": college4,
+	//    "J Block": college5,
+	//    "E Block": college6,
+	//    "B Block": college7
        };
 	
 
