@@ -61,8 +61,24 @@
 	    maxZoom: 20,
 	    minZoom: 12,
 	    attribution: 'LiDAR 1m DSM Environment Agency OGL &copy; Crown Copyright 2021'
-	
-	var data = omnivore.csv('strode.csv', null, siteData).on('ready', function() {}).addTo(mymap);
+	});	
+	//var siteData = L.geoJson(null, {
+	//    pointToLayer: function (feature, latlng) {
+	//	return L.marker(latlng)
+        //    },
+		
+        //    onEachFeature: function(feature, layer) {
+	//	layer.bindTooltip(
+	//            feature.properties.location
+	//	);
+        //        layer.bindPopup(
+        //             feature.properties.location +
+	//	     '<br>' + feature.properties.description
+        //        );
+       //     }
+        //
+	var data = omnivore.csv('strode.csv').addTo(mymap);
+	//var data = omnivore.csv('strode.csv', null, siteData).on('ready', function() {}).addTo(mymap);
 	
 	//var college = L.marker([51.129852, -2.7334955]).addTo(mymap);
 	//college.bindPopup("<b>C Block</b><br>T-Levels, Woodworking, Music").openPopup();
@@ -105,28 +121,12 @@
 		"Surface": surface,
 	    "Data": data
        };
-	
-	var siteData = L.geoJson(null, {
-	    pointToLayer: function (feature, latlng) {
-		return L.marker(latlng)
-            },
-		
-            onEachFeature: function(feature, layer) {
-		layer.bindTooltip(
-	            feature.properties.location
-		);
-                layer.bindPopup(
-                     feature.properties.location +
-		     '<br>' + feature.properties.description
-                );
-            }
-        });
 
        L.control.layers(baseMaps, overlayMaps).addTo(mymap);
        L.control.mousePosition().addTo(mymap);
 
 	mymap.addControl(new L.Control.Fullscreen());
-	omnivore.csv('strode.csv').addTo(mymap);
+
 </script>
 
 
